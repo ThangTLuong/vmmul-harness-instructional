@@ -9,8 +9,8 @@ const char* dgemv_desc = "Reference dgemv.";
  * On exit, A and X maintain their input values.
  * This function wraps a call to the BLAS-2 routine DGEMV
  */
-void my_dgemv(int n, double* A, double* x, double* y) {
+void my_dgemv(int size, double* A, double* x, double* y) {
    double alpha=1.0, beta=1.0;
-   int lda=n, incx=1, incy=1;
-   cblas_dgemv(CblasRowMajor, CblasNoTrans, n, n, alpha, A, lda, x, incx, beta, y, incy);
+   int lda=size, incx=1, incy=1;
+   cblas_dgemv(CblasRowMajor, CblasNoTrans, size, size, alpha, A, lda, x, incx, beta, y, incy);
 }

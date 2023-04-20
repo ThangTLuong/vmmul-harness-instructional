@@ -1,4 +1,6 @@
-const char* dgemv_desc = "Basic implementation of matrix-vector multiply.";
+#include <iostream>
+
+const char *dgemv_desc = "Basic implementation of matrix-vector multiply.";
 
 /*
  * This routine performs a dgemv operation
@@ -6,6 +8,17 @@ const char* dgemv_desc = "Basic implementation of matrix-vector multiply.";
  * where A is n-by-n matrix stored in row-major format, and X and Y are n by 1 vectors.
  * On exit, A and X maintain their input values.
  */
-void my_dgemv(int n, double* A, double* x, double* y) {
-   // insert your code here: implementation of basic matrix multiply
+void my_dgemv(int size, double *A, double *x, double *y)
+{
+  // insert your code here: implementation of basic matrix multiply
+
+  for (int i = 0; i < size; i++)
+  {
+    double hold = 0;
+    for (int j = 0; j < size; j++)
+    {
+      hold += A[i, j] * x[j];
+    }
+    y[i] += hold;
+  }
 }

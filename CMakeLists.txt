@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(hw2 LANGUAGES C CXX)
+project(VMMUL-HARNESS-INSTRUCTIONAL LANGUAGES C CXX)
 
 message(STATUS "compiler = " ${CMAKE_C_COMPILER_ID})
 

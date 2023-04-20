@@ -12,7 +12,7 @@ const char* dgemv_desc = "OpenMP dgemv.";
  * On exit, A and X maintain their input values.
  */
 
-void my_dgemv(int n, double* A, double* x, double* y) {
+void my_dgemv(int size, double* A, double* x, double* y) {
 
    #pragma omp parallel
    {
