@@ -10,8 +10,12 @@ void my_dgemv(int size, double *A, double *x, double *y)
 {
   // insert your code here: implementation of basic matrix multiply
   for (int i = 0; i < size; i++)
+  {
+    double temp = 0.0;
     for (int j = 0; j < size; j++)
-      y[i] += A[j + (i * size)] * x[j];
+      temp += A[j + (i * size)] * x[j];
+    y[i] += temp;
+  }
 }
 
 /**
