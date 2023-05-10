@@ -2,114 +2,140 @@ salloc --nodes 1 --qos interactive --time 01:00:00 --constraint knl --account m3
 module load PrgEnv-intel
 
 
-benchmark-blas
+Description:    OpenMP dgemv outer.
+
 Working on problem size N=1024 
- Elapsed time is : 0.00899
-Working on problem size N=1024 
- Elapsed time is : 0.00097
-Working on problem size N=2048 
- Elapsed time is : 0.00356
-Working on problem size N=4096 
- Elapsed time is : 0.01387
-Working on problem size N=8192 
- Elapsed time is : 0.05583
-Working on problem size N=16384 
- Elapsed time is : 0.22189
-
-Problem size, MFLOPs, % bandwidth
-1024:   2162.01237,  12.66804%
-2048:   2356.35056,  13.80674%
-4096:   2419.20922,  14.17505%
-8192:   2404.04313,  14.08619%
-16384:  2419.53631,  14.17697%
-
-
-
-benchmark-basic
+ Elapsed time is : 0.07141
 Working on problem size N=1024 
  Elapsed time is : 0.00451
-Working on problem size N=1024 
- Elapsed time is : 0.00450
 Working on problem size N=2048 
- Elapsed time is : 0.01803
+ Elapsed time is : 0.01792
 Working on problem size N=4096 
- Elapsed time is : 0.07193
+ Elapsed time is : 0.07171
 Working on problem size N=8192 
- Elapsed time is : 0.29609
+ Elapsed time is : 0.29279
 Working on problem size N=16384 
- Elapsed time is : 1.17788
+ Elapsed time is : 1.16838
 
-Problem size, MFLOPs, % bandwidth
-1024:   932.06755,  2.73066%
-2048:   930.51669,  2.72612%
-4096:   932.97461,  2.73332%
-8192:   906.60088,  2.65605%
-16384:  911.58846,  2.67066%
+Description:    OpenMP dgemv outer.
 
-
-
-benchmark-vectorized
 Working on problem size N=1024 
- Elapsed time is : 0.00106
+ Elapsed time is : 0.06861
 Working on problem size N=1024 
- Elapsed time is : 0.00100
+ Elapsed time is : 0.00134
 Working on problem size N=2048 
- Elapsed time is : 0.00395
+ Elapsed time is : 0.00468
 Working on problem size N=4096 
- Elapsed time is : 0.01560
+ Elapsed time is : 0.01809
 Working on problem size N=8192 
- Elapsed time is : 0.06305
+ Elapsed time is : 0.07287
 Working on problem size N=16384 
- Elapsed time is : 0.28492
+ Elapsed time is : 0.29530
 
+Description:    OpenMP dgemv outer.
 
-Problem size, MFLOPs, % bandwidth
-1024:   4194.30400,  12.28800%
-2048:   4247.39645,  12.44354%
-4096:   4301.85025,  12.60307%
-8192:   4257.50128,  12.47314%
-16384:  3768.57301,  11.04074%
-
-
-benchmark-openmp
-bash ./job-openmp
 Working on problem size N=1024 
- Elapsed time is : 0.07213
+ Elapsed time is : 0.07112
 Working on problem size N=1024 
- Elapsed time is : 0.00458
+ Elapsed time is : 0.00086
 Working on problem size N=2048 
- Elapsed time is : 0.01823
+ Elapsed time is : 0.00252
 Working on problem size N=4096 
- Elapsed time is : 0.07202
+ Elapsed time is : 0.00928
 Working on problem size N=8192 
- Elapsed time is : 0.28800
+ Elapsed time is : 0.03646
 Working on problem size N=16384 
- Elapsed time is : 1.15318
-Description:    OpenMP dgemv.
+ Elapsed time is : 0.14757
+
+
+
+
+Description:    OpenMP dgemv inner.
 
 Working on problem size N=1024 
- Elapsed time is : 0.07032
+ Elapsed time is : 0.07377
 Working on problem size N=1024 
- Elapsed time is : 0.00131
+ Elapsed time is : 0.00575
 Working on problem size N=2048 
- Elapsed time is : 0.00473
+ Elapsed time is : 0.02094
 Working on problem size N=4096 
- Elapsed time is : 0.01820
+ Elapsed time is : 0.07804
 Working on problem size N=8192 
- Elapsed time is : 0.07212
+ Elapsed time is : 0.30964
 Working on problem size N=16384 
- Elapsed time is : 0.28880
-Description:    OpenMP dgemv.
+ Elapsed time is : 1.20736
+
+Description:    OpenMP dgemv inner.
 
 Working on problem size N=1024 
- Elapsed time is : 0.07016
+ Elapsed time is : 0.07470
 Working on problem size N=1024 
- Elapsed time is : 0.00085
+ Elapsed time is : 0.00665
 Working on problem size N=2048 
- Elapsed time is : 0.00261
+ Elapsed time is : 0.01552
 Working on problem size N=4096 
- Elapsed time is : 0.00933
+ Elapsed time is : 0.04027
 Working on problem size N=8192 
- Elapsed time is : 0.03630
+ Elapsed time is : 0.12346
 Working on problem size N=16384 
- Elapsed time is : 0.14435
+ Elapsed time is : 0.40058
+
+Description:    OpenMP dgemv inner.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.07721
+Working on problem size N=1024 
+ Elapsed time is : 0.00924
+Working on problem size N=2048 
+ Elapsed time is : 0.01850
+Working on problem size N=4096 
+ Elapsed time is : 0.04214
+Working on problem size N=8192 
+ Elapsed time is : 0.10316
+Working on problem size N=16384 
+ Elapsed time is : 0.29141
+
+
+
+Description:    OpenMP dgemv nested.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.07265
+Working on problem size N=1024 
+ Elapsed time is : 0.00560
+Working on problem size N=2048 
+ Elapsed time is : 0.02055
+Working on problem size N=4096 
+ Elapsed time is : 0.07726
+Working on problem size N=8192 
+ Elapsed time is : 0.30739
+Working on problem size N=16384 
+ Elapsed time is : 1.20405
+Description:    OpenMP dgemv nested.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.07175
+Working on problem size N=1024 
+ Elapsed time is : 0.00171
+Working on problem size N=2048 
+ Elapsed time is : 0.00553
+Working on problem size N=4096 
+ Elapsed time is : 0.01999
+Working on problem size N=8192 
+ Elapsed time is : 0.07674
+Working on problem size N=16384 
+ Elapsed time is : 0.30538
+Description:    OpenMP dgemv nested.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.07115
+Working on problem size N=1024 
+ Elapsed time is : 0.00104
+Working on problem size N=2048 
+ Elapsed time is : 0.00303
+Working on problem size N=4096 
+ Elapsed time is : 0.01026
+Working on problem size N=8192 
+ Elapsed time is : 0.03872
+Working on problem size N=16384 
+ Elapsed time is : 0.15265
